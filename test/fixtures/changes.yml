@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  qa: MyString
+  tribo: MyString
+  squad: MyString
+  numero_change: MyString
+  link_change: MyString
+  rollback: false
+  hotfix: false
+  horario_change: MyString
+  horario_fim_change: MyString
+  lead: MyString
+  link_evidencia: MyString
+  observacoes: MyString
+
+two:
+  qa: MyString
+  tribo: MyString
+  squad: MyString
+  numero_change: MyString
+  link_change: MyString
+  rollback: false
+  hotfix: false
+  horario_change: MyString
+  horario_fim_change: MyString
+  lead: MyString
+  link_evidencia: MyString
+  observacoes: MyString

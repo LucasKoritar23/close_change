@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Solicitação de encerramento de change</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <style>
+        .form-change{
+            margin: 20px;        
+        }
+    </style>
+</head>
+<body>
+    <script src='create_change.js'></script>
+    <div class="form-change">
+    <form name="change" onsubmit="create_change()">
+        <div class="form-group row">
+            <label for="qa" class="col-sm-2 col-form-label">Nome do QA </label>
+            <div class="col-sm-4">
+                <input type="text" name="nome" id="nome" class="form-control" required />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="tribo" class="col-sm-2 col-form-label">Tribo </label>
+            <div class="col-sm-2">
+                <input type="text" name="tribo" id="tribo" class="form-control" required />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="squad" class="col-sm-2 col-form-label">Squad </label>
+            <div class="col-sm-2">
+            <input type="text" name="squad" id="squad" class="form-control" required />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="numero_change" class="col-sm-2 col-form-label">Número da Change </label>
+            <div class="col-sm-2">
+                <input type="text" name="numero_change" id="numero_change" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="link_change" class="col-sm-2 col-form-label">Link da Change </label>
+            <div class="col-sm-6">
+                <input type="text" name="link_change" id="link_change" class="form-control" required />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="rollback" class="col-sm-2 col-form-label">Foi necessário algum rollback? </label>
+            <div class="col-sm-4">
+                <input type="radio" name="rollback" id="rollback" value="true" required/> Sim
+                <input type="radio" name="rollback" id="rollback" value="false" required/> Não
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="hotfix" class="col-sm-2 col-form-label" >Foi necessário algum hotfix? </label>
+            <div class="col-sm-4">
+                <input type="radio" name="hotfix" id="hotfix" value="true" required/> Sim
+                <input type="radio" name="hotfix" id="hotfix" value="false" required/> Não
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="horario_change" class="col-sm-2 col-form-label" >Data e hora de inicio da Change</label>
+            <div class="col-sm-4">
+                <input type="date" id="date_ini" required />
+                <input type="time" id="time_ini" required />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="horario_change" class="col-sm-2 col-form-label" >Data e hora do final da Change</label>
+            <div class="col-sm-4">
+                <input type="date" id="date_fin" required/>
+                <input type="time" id="time_fin" required />
+            </div>
+        </div>
+
+
+        
+
+        <div class="form-group row">
+            <label for="lead" class="col-sm-2 col-form-label">Lead Responsável </label>
+            <div class="col-sm-4">
+                <select class="form-control" id="lead" required>
+                    <option></option>
+                    <option>Beatriz Tavares</option>
+                    <option>Felipe Lourenço</option>
+                    <option>Rodrigo Seixas</option>
+                    <option>Lucas Koritar</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="link_evidencia" class="col-sm-2 col-form-label">Link Evidência </label>
+            <div class="col-sm-6">
+                <input type="text" name="link_evidencia" id="link_evidencia" class="form-control" required/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="observacoes" class="col-sm-2 col-form-label">Observações </label>
+            <div class="col-sm-4">
+                <textarea name="observacoes" id="observacoes" rows="6" class="form-control"></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Solicitar Encerramento de Change</button>
+    </form>
+</div>
+</body>
+</html>
